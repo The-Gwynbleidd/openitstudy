@@ -16,6 +16,8 @@ gem 'figaro'
 gem 'haml'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'font-awesome-rails'
+gem 'simple_form'
+gem 'devise'
 
 group :development, :test do
   gem 'byebug'

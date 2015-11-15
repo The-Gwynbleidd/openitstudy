@@ -2,5 +2,23 @@
 header {
   .navbar {
     border-radius: 0;
+    background: #37474F;
+
+    .navbar-brand {
+      color:#fff;
+      font-weight: bold;
+    }
+
+    #navbar {
+      a {
+        color:#fff;
+      }
+    }
+
+    .dropdown-menu {
+      a {
+        color:#000 !important;
+      }
+    }
   }
 }
