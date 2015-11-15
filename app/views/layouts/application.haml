@@ -10,4 +10,8 @@
     %header
       =render 'shared/main_navigation'
     .container-fluid
-      = yield
+      .row
+        =render 'shared/sidebar'
+        .main-content
+          = yield
+      =render 'shared/footer'

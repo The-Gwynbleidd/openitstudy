@@ -3,6 +3,7 @@ header {
   .navbar {
     border-radius: 0;
     background: #37474F;
+    margin-bottom:0;
 
     .navbar-brand {
       color:#fff;
@@ -31,4 +32,22 @@ header {
     box-shadow: 0 0 2px #fff;
   }
 
+}
+
+.sidebar {
+  background: #263238;
+  color:#fff;
+}
+
+.main-content {
+  margin-top:15px ;
+}
+
+/* Buttons */
+.btn-new {
+  border-radius: 0 !important;
+  padding:10px !important;
+  font-weight: bold !important;
+  width:150px;
+  border:1px solid #000 !important;
 }

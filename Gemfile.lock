@@ -37,6 +37,8 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     acts_as_follower (0.2.1)
+    animate-rails (1.0.8)
+      rails
     arel (6.0.3)
     autoprefixer-rails (6.0.3)
       execjs
@@ -185,6 +187,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts_as_follower
+  animate-rails
   aws-sdk (< 2.0)
   bootstrap-sass (~> 3.3.5)
   byebug

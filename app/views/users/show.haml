@@ -1,11 +1,18 @@
-%h1
-  =@user.email
-- unless current_user.id == @user.id
-  - unless current_user.following?(@user)
-    .follow-link
-      =link_to follow_user_path, class:"btn btn-primary", remote: true do
-        Follow
-  - else
-    .follow-link
-      = link_to unfollow_user_path, remote: true, class: "btn btn-primary" do
-        Unfollow
+.col-md-10.user
+  %section{:class=>"user-profile", :style => "background-image:url('#{@user.cover.url}')"}
+    .user-avatar
+      =image_tag(@user.avatar.url(:square), class:"img img-responsive img-circle")
+    .user-names
+      =@user.first_name
+      =@user.last_name
+    - unless current_user.id == @user.id
+      - unless current_user.following?(@user)
+        .follow-link
+          =link_to follow_user_path, class:"btn btn-primary btn-new", remote: true do
+            Follow
+      - else
+        .follow-link
+          = link_to unfollow_user_path, remote: true, class: "btn btn-default btn-new" do
+            Unfollow
+  %h1
+    =@user.email

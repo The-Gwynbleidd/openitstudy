@@ -1,0 +1,25 @@
+.user {
+  .user-profile {
+    height:350px;
+    background-size: cover;
+    text-align:center;
+    .user-avatar {
+      img {
+        margin-top:50px;
+        box-shadow:0 0 10px #fff;
+        display:inline-block;
+        width:200px;
+        height:200px;
+      }
+    }
+    .user-names {
+      margin-top:7px;
+      font-weight:bold;
+      color:#fff;
+      font-size:2.1rem;
+    }
+    .follow-link {
+      margin-top:10px;
+    }
+  }
+}
