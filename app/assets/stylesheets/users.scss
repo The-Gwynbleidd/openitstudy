@@ -1,4 +1,4 @@
-.user {
+.user-page {
   .user-profile {
     height:350px;
     background-size: cover;
@@ -20,6 +20,36 @@
     }
     .follow-link {
       margin-top:10px;
+    }
+  }
+}
+
+.users {
+  .user {
+    padding:3px !important;
+    margin:0;
+    text-align:center;
+    margin-bottom:5px;
+    img {
+      width: 100%;
+      height:auto;
+    }
+    .user-info {
+      margin-top:5px;
+      a {
+        font-weight:bold;
+        font-size:1.7rem;
+      }
+    }
+    .user-links {
+      font-size:2rem;
+      a {
+        color:#333;
+      }
+      a:hover {
+        color:#006699;
+        text-decoration:none;
+      }
     }
   }
 }

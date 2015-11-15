@@ -1,1 +1,7 @@
-= render @users
+.col-md-10.users
+  = render @users
+
+:javascript 
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+  });

@@ -1,3 +1,14 @@
-.user
-  =link_to user do
-    =user.email
+.col-md-3.user.thumbnail
+  .user-avatar
+    =image_tag(user.avatar.url(:square), class:"img img-responsive")
+  .user-info
+    =link_to user do
+      =user.first_name
+      =user.last_name
+  .user-links
+    =link_to user.github, "data-toggle"=>"tooltip", "data-placement"=>"bottom", "title"=>"GitHub" do
+      %i.fa.fa-github
+    =link_to user.twitter, "data-toggle"=>"tooltip", "data-placement"=>"bottom", "title"=>"Twitter" do
+      %i.fa.fa-twitter
+    =link_to user.facebook, "data-toggle"=>"tooltip", "data-placement"=>"bottom", "title"=>"Facebook" do
+      %i.fa.fa-facebook
