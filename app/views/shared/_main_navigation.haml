@@ -26,6 +26,10 @@
               %span.caret
             %ul.dropdown-menu
               %li
+                =link_to current_user do
+                  %i.fa.fa-user
+                  My Profile
+              %li
                 =link_to edit_user_registration_path do
                   %i.fa.fa-cogs
                   Settings

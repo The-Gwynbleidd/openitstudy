@@ -1,7 +1,10 @@
 .col-md-10.users
   = render @users
+  .row
+    .col-md-12.pagination
+      = will_paginate @users, renderer: BootstrapPagination::Rails
 
-:javascript 
+:javascript
   $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
   });

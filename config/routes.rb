@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users do
     member do
-      get 'follow', 'unfollow'
+      get 'follow', 'unfollow', 'following', 'followers'
     end
   end
 

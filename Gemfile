@@ -22,6 +22,8 @@ gem 'acts_as_follower'
 gem 'paperclip', '~> 4.3'
 gem 'aws-sdk', '< 2.0'
 gem 'animate-rails'
+gem 'friendly_id', '~> 5.1.0'
+gem 'will_paginate-bootstrap' 
 
 group :development, :test do
   gem 'byebug'

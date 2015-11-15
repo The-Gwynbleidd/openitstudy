@@ -52,4 +52,30 @@
       }
     }
   }
+
+  .pagination {
+    text-align:center;
+  }
+}
+
+.following {
+  .follow-preview {
+    margin:0;
+    padding:1px !important;
+  }
+}
+
+.following-count {
+  margin-top:5px;
+  margin-bottom:5px;
+}
+
+.btn-follow {
+  width:100% !important;
+  border-radius:0 !important;
+  padding:5px !important;
+  font-weight:bold !important;
+  color:#fff !important;
+  background: #37474F !important;
+  border:none !important;
 }

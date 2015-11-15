@@ -14,5 +14,29 @@
         .follow-link
           = link_to unfollow_user_path, remote: true, class: "btn btn-default btn-new" do
             Unfollow
-  %h1
-    =@user.email
+  .row
+    .col-md-3
+      .following
+        .row
+        -@followers.each do |f|
+          .col-md-3.follow-preview
+            =link_to f, "data-toggle"=>"tooltip", "data-placement"=>"top", "title"=>f.username do
+              =image_tag(f.avatar.url(:thumb), class:"img img-responsive")
+        .following-count
+          =link_to followers_user_path, class:"btn btn-primary btn-follow" do
+            ="See all followers (#{@user.followers_count})"
+
+      .following
+        .row
+        -@follow.each do |f|
+          .col-md-3.follow-preview
+            =link_to f, "data-toggle"=>"tooltip", "data-placement"=>"top", "title"=>f.username do
+              =image_tag(f.avatar.url(:thumb), class:"img img-responsive")
+        .following-count
+          =link_to following_user_path, class:"btn btn-primary btn-follow" do
+            ="See all following (#{@user.follow_count})"
+
+:javascript
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+  });
