@@ -1,2 +1,11 @@
 %h1
   =@user.email
+- unless current_user.id == @user.id
+  - unless current_user.following?(@user)
+    .follow-link
+      =link_to follow_user_path, class:"btn btn-primary", remote: true do
+        Follow
+  - else
+    .follow-link
+      = link_to unfollow_user_path, remote: true, class: "btn btn-primary" do
+        Unfollow
