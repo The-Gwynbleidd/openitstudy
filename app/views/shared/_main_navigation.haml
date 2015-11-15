@@ -21,6 +21,7 @@
         -if user_signed_in?
           %li.dropdown
             =link_to "#", class:"dropdown-toggle", "data-toggle"=>"dropdown", "role"=>"button", "aria-haspopup"=>"true", "aria-expanded"=>"false" do
+              = image_tag(current_user.avatar.url(:thumb), class:"img img-responsive img-circle avatar pull-left")
               = current_user.email
               %span.caret
             %ul.dropdown-menu

@@ -1,4 +1,14 @@
 Rails.application.configure do
+  # Upload files to Amazon S3
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['AWS_BUCKET_NAME'],
+      :access_key_id => ENV['AWS_KEY'],
+      :secret_access_key => ENV['AWS_SECRET_KEY']
+    }
+  }
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
