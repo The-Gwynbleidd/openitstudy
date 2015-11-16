@@ -1,15 +1,15 @@
 class User < ActiveRecord::Base
-  #User Authentication
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+  # User Authentication
+  ## Include default devise modules. Others available are:
+  ## :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  #User communication
+  # User communication
   acts_as_followable
   acts_as_follower
 
-  #User data
+  # User data
 
   ##Avatar
   has_attached_file :avatar, styles: {medium: "400x300>", square: "250x250#", thumb: "100x100>", small_thumb:"30x30#" }, default_url: "avatar.png"
@@ -22,5 +22,8 @@ class User < ActiveRecord::Base
   ##Friendly id
   extend FriendlyId
   friendly_id :username, use: :slugged
+
+  ##Searchkick
+  searchkick
 
 end

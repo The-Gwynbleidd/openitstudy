@@ -5,6 +5,8 @@
     =link_to user do
       =user.first_name
       =user.last_name
+  .user-role
+    =user.role
   .user-links
     -if user.github.present?
       =link_to user.github, "data-toggle"=>"tooltip", "data-placement"=>"bottom", "title"=>"GitHub" do

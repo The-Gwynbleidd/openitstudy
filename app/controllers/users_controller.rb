@@ -14,6 +14,14 @@ class UsersController < ApplicationController
 
   end
 
+  def search
+    if params[:search].present?
+      @users = User.search(params[:search])
+    else
+      @users = User.paginate(:page => params[:page], :per_page => 30).order("created_at ASC")
+    end
+  end
+
   def follow
     current_user.follow(@user)
     respond_to do |format|

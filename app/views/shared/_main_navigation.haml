@@ -17,6 +17,7 @@
           = link_to users_path do
             %i.fa.fa-users
               Users
+
       %ul.nav.navbar-nav.navbar-right
         -if user_signed_in?
           %li.dropdown
@@ -47,3 +48,7 @@
             = link_to new_user_registration_path do
               %i.fa.fa-user-plus
               Sign Up
+
+      = form_tag search_users_path, method: :get, class:"navbar-form navbar-right", role:"search" do
+        = text_field_tag :search, params[:search], class:"form-control"
+        = submit_tag "Search", name:nil, class:"btn btn-default"
