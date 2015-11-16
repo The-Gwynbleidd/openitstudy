@@ -22,5 +22,14 @@ module Openitstudy
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    ActionMailer::Base.smtp_settings = {
+        :enable_starttls_auto => true,
+        :address        => 'smtp.mandrillapp.com',
+        :port           => 587,
+        :authentication => :plain,
+        :domain => 'mandrillapp.com',
+        :user_name      => ENV['MANDRILL_EMAIL'],
+        :password       => ENV['MANDRILL_KEY']
+    }
   end
 end
