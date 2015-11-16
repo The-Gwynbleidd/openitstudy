@@ -29,4 +29,7 @@ class User < ActiveRecord::Base
   ##User posts
   has_many :posts
 
+  ##Like posts
+  acts_as_voter
+
 end

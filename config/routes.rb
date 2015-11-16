@@ -9,7 +9,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :posts
+  resources :posts do
+    member do
+      get 'like', 'dislike'
+    end
+  end
 
 
   get 'landing' => 'static_pages#landing'

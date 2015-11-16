@@ -1,0 +1,4 @@
+var id = '<%= @post.id %>';
+var count = '<%= @post.votes_for.size %>';
+$("#post_" + id + " .like").html("<%= escape_javascript link_to 'Unlike', dislike_post_path(@post), remote: true, class:'btn btn-default animated slideInDown' %>");
+$("#post_" + id + " .likes").html(count);

@@ -25,6 +25,7 @@ gem 'animate-rails'
 gem 'friendly_id', '~> 5.1.0'
 gem 'will_paginate-bootstrap'
 gem 'searchkick'
+gem 'acts_as_votable', '~> 0.10.0'
 
 group :development, :test do
   gem 'byebug'

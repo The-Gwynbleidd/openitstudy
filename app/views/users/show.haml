@@ -37,7 +37,7 @@
             ="See all following (#{@user.follow_count})"
     .col-md-6.posts
       -@posts.each do |post|
-        .post
+        %div{:class=>"post", :id => "post_#{post.id}"}
           .row
             .col-md-12.post-header
               =image_tag(post.user.avatar.url(:thumb), class:"img img-responsive img-circle pull-left")
@@ -51,6 +51,19 @@
           .row
             .col-md-12.post-body
               =post.body
+          .row
+            .col-md-12.post-social
+              -unless current_user.voted_for? post
+                %span.like
+                  =link_to like_post_path(post), remote: true, class:"btn btn-success" do
+                    Like
+              -else
+                %span.like
+                  =link_to dislike_post_path(post), remote: true, class:"btn btn-default" do
+                    Unlike
+              %span.likes
+                =post.votes_for.size
+
 
 
 :javascript
