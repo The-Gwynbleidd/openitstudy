@@ -1,0 +1,4 @@
+$('#post_body').val('');
+$('.status-feed').prepend(
+  '<div class="media animated slideInLeft">' + '<div class="media-left"><%= escape_javascript image_tag(@post.user.avatar.url(:thumb), class:"media-object") %></div>' + '<div class="media-body"><%= @post.body %></div>' + '</div>'
+);

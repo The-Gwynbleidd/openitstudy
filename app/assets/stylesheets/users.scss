@@ -79,3 +79,22 @@
   background: #37474F !important;
   border:none !important;
 }
+
+.posts {
+  margin-top:10px;
+}
+
+
+/* Dashboard */
+.dashboard {
+  .status-feed {
+    margin-top:20px;
+
+    .media {
+      .media-object {
+        width: 70px;
+        height:70px;
+      }
+    }
+  }
+}

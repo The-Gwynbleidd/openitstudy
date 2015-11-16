@@ -8,10 +8,12 @@ class UsersController < ApplicationController
   def show
     @follow = @user.all_following.take(12)
     @followers = @user.followers.take(12)
+    @posts = Post.where("user_id = ?", @user.id).order("created_at DESC")
   end
 
   def dashboard
-
+    @post = Post.new
+    @posts = Post.where("user_id = ?", current_user.id).order("created_at DESC")
   end
 
   def search

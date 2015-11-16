@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :posts
+
 
   get 'landing' => 'static_pages#landing'
   get 'dashboard' => 'users#dashboard'

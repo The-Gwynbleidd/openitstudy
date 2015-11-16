@@ -1,0 +1,25 @@
+.post {
+  padding:5px;
+  box-shadow:0 0 5px #333;
+  margin-bottom:5px;
+  .post-header {
+    img {
+      width:45px;
+      height:45px;
+      margin-right:5px;
+    }
+
+    .post-link {
+      padding-top:13px !important;
+      font-weight:bold;
+      display:inline-block !important;
+    }
+
+    margin-bottom:4px;
+  }
+
+  .post-body {
+    margin-top:8px;
+  }
+
+}

@@ -1,0 +1,17 @@
+.col-md-10.dashboard
+  %section.post-form
+    =simple_form_for(@post, remote:true) do |f|
+      =f.input :body
+      =f.submit
+  .row
+    .col-md-8
+      %section.status-feed
+        -@posts.each do |post|
+          .media
+            %a.media-left{:href=>"#"}
+              =image_tag(post.user.avatar.url(:thumb), class:"media-object")
+            .media-body
+              .media-heading
+                %h4
+                  =post.user.username
+              =post.body

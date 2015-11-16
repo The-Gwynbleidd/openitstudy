@@ -26,4 +26,7 @@ class User < ActiveRecord::Base
   ##Searchkick
   searchkick
 
+  ##User posts
+  has_many :posts
+
 end

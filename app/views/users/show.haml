@@ -35,6 +35,23 @@
         .following-count
           =link_to following_user_path, class:"btn btn-primary btn-follow" do
             ="See all following (#{@user.follow_count})"
+    .col-md-6.posts
+      -@posts.each do |post|
+        .post
+          .row
+            .col-md-12.post-header
+              =image_tag(post.user.avatar.url(:thumb), class:"img img-responsive img-circle pull-left")
+              =link_to post.user.username, post.user, class:"post-link"
+          .row
+            .col-md-12.post-date
+              %em
+              =time_ago_in_words(post.created_at)
+              ago...
+
+          .row
+            .col-md-12.post-body
+              =post.body
+
 
 :javascript
   $(document).ready(function(){
